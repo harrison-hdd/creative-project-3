@@ -50,6 +50,10 @@ export default {
     register() {
       let newUsername = document.getElementById("username").value;
       let newPassword = document.getElementById("password").value;
+      if (newUsername === "" || newPassword) {
+        alert("Username and password cannot be blank");
+        return;
+      }
       let user = this.$root.$data.users.find(
         (user) => user.username === newUsername
       );
