@@ -50,7 +50,7 @@ export default {
     register() {
       let newUsername = document.getElementById("username").value;
       let newPassword = document.getElementById("password").value;
-      if (newUsername === "" || newPassword) {
+      if (newUsername === "" || newPassword === "") {
         alert("Username and password cannot be blank");
         return;
       }
